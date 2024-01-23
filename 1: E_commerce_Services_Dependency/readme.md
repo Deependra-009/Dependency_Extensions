@@ -4,8 +4,6 @@
 
 This repository contains two services for an e-commerce application based on the Spring framework. These services provide functionality related to the user's cart and wishlist.
 
-## Steps are given below to install dependency for `gradle` or `maven`
-
 ### If you have any doubt or find a bug so don't hesitate contact to me because it help me to improve this dependency
 Email:  deeputrivedi0409@gmail.com 
 
@@ -96,117 +94,13 @@ service:
 
 ```
 
-## Instructions for Running the Services
-
-1: Add the dependency
-
-
-## Maven
-
-Add the following dependency to your Maven `pom.xml` file:
-
-```xml
-<dependency>
-		<groupId>com.ecommerce</groupId>
-		<artifactId>services</artifactId>
-		<version>1.0.0</version>
-</dependency>
-```
-
-## Gradle
-
-Add the following implementation to your Gradle `build.gradle` file:
-
-```gradle
-implementation 'com.ecommerce:services:1.0.0'
-```
-
-2: Add the authentication in your project for github-packages
-
-# Maven
-
-## intellij
-
-- Select your project
-- Right click on project 
-- Select maven -> open setting.xml 
-- Copy below and paste into setting.xml
+## How to install on your project:
 
 ```
-<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
-                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
-
-  <activeProfiles>
-    <activeProfile>github</activeProfile>
-  </activeProfiles>
-
-  <profiles>
-    <profile>
-      <id>github</id>
-      <repositories>
-        <repository>
-          <id>central</id>
-          <url>https://repo1.maven.org/maven2</url>
-        </repository>
-        <repository>
-          <id>github</id>
-          <url>https://maven.pkg.github.com/Deependra-009/E-COMMERCE-SPRING-DEPENDENCY</url>
-          <snapshots>
-            <enabled>true</enabled>
-          </snapshots>
-        </repository>
-      </repositories>
-    </profile>
-  </profiles>
-
-  <servers>
-    <server>
-      <id>github</id>
-      <username>YOUR_GITHUB_USERNAME</username>
-      <password>YOUR_PERSONAL_ACCESS_TOKEN</password>
-    </server>
-  </servers>
-</settings>
+IntelliJ -> File Option -> Project Structure -> Modules (Dependdency) -> click add + icon to add dependency
 ```
-
-## For other IDE. So check on google: `how to open setting.xml file on you IDE`
-
-#Gradle
-
-```gradle
-plugins {
-    id("maven-publish")
-}
-publishing {
-    repositories {
-        maven {
-            name = "github"
-            url = uri("https://maven.pkg.github.com/Deependra-009/E-COMMERCE-SPRING-DEPENDENCY")
-            credentials {
-                username = "YOUR_GITHUB_USERNAME"
-                password = "YOUR_PERSONAL_ACCESS_TOKEN"
-            }
-        }
-    }
-    publications {
-        gpr(MavenPublication) {
-            from(components.java)
-        }
-    }
-}
 ```
-
-**Note:** Ensure that you have the necessary access rights to the GitHub repository and provide the correct credentials for authentication.
-
-
-```
-mvn install
-```
-or
-```
-click build module
+Other IDE so please check on google How to add JAR 
 ```
 
 ## Don't forget to add this annotation in main class
@@ -268,7 +162,9 @@ The `FilterService` manages various filters to enhance the user's shopping exper
   - Implement a feature for users to view their order history and reorder previous purchases.
 
 - **Automated Order Tracking:**
-  - Integrate automated notifications for real-time order tracking.     
+  - Integrate automated notifications for real-time order tracking.
+ 
+   
      
 
 
