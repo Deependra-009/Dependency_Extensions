@@ -1,0 +1,48 @@
+{
+  "name": "time-estimator",
+  "displayName": "Time Estimator",
+  "description": "AI-powered time estimation for tasks, code blocks, and tickets",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:timeEstimator.estimateSelection",
+    "onCommand:timeEstimator.setApiKey"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "timeEstimator.estimateSelection",
+        "title": "Estimate Time for Selection"
+      },
+      {
+        "command": "timeEstimator.setApiKey",
+        "title": "Time Estimator: Set API Key"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "timeEstimator.estimateSelection",
+          "when": "editorHasSelection",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^4.9.0"
+  }
+}
